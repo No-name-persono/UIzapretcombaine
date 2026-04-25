@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.mypy_cache/
+.pytest_cache/
+
+# PyInstaller/build output
+build*/
+dist*/
+release_assets/
+*.spec.bak
+
+# Local portable archives and ad-hoc bundles
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# Bundled upstream binaries/snapshots.
+# Keep them in GitHub Releases, not in the source repository.
+zapret/
+zapret_bak_*/
+data/upstreams/
+data/upstream_state.json
+
+# Runtime/user state
+data/logs/
+data/settings.json
+data/profiles.json
+data/domain_strategies.json
+data/target-hosts.txt
+data/hosts_*.txt
+data/custom-lists/*
+!data/custom-lists/.gitkeep
+
+# Local OS/editor state
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
