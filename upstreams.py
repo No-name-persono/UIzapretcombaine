@@ -103,10 +103,14 @@ log = logging.getLogger("upstreams")
 
 
 def _github_headers() -> dict:
-    return {
+    headers = {
         "User-Agent": USER_AGENT,
         "Accept": "application/vnd.github+json",
     }
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
 
 
 def _http_get_json(url: str, timeout: int = 30):

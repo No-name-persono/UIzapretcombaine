@@ -78,3 +78,17 @@ Good starter issues:
 - Add tests for strategy parsing.
 - Add screenshots to README.
 - Add signed release or installer research.
+
+## Building From A Fresh Clone
+
+The source repository intentionally does not store `zapret/` or `data/upstreams/`.
+
+To build a portable archive from a clean clone, run:
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python fetch_release_components.py
+.\build_release.bat
+```
+
+`build_release.bat` also calls `fetch_release_components.py`, but running it explicitly first makes missing network/API problems easier to diagnose.

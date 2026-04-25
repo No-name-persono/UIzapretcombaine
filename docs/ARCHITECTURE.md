@@ -13,6 +13,7 @@ Zapret2 Manager is a Python/Tkinter desktop wrapper around several upstream netw
 | `tg_ws_proxy.py` | Local adapted Telegram WebSocket proxy runtime |
 | `flowseal_profiles.py` | Flowseal batch/profile parsing and runtime profile generation |
 | `generator.py` | Strategy generation and verification helpers |
+| `fetch_release_components.py` | Downloads runtime components required for source builds |
 | `prepare_release_assets.py` | Creates sanitized release `data/` assets before PyInstaller build |
 
 ## Runtime Folders
@@ -66,7 +67,7 @@ The `tg_ws_proxy` snapshot does not blindly replace the local `tg_ws_proxy.py`. 
 
 ## Release Build
 
-`build_release.bat` runs `prepare_release_assets.py`, then PyInstaller with `Zapret2Manager.spec`.
+`build_release.bat` runs `fetch_release_components.py`, then `prepare_release_assets.py`, then PyInstaller with `Zapret2Manager.spec`.
 
 The intended release shape is:
 

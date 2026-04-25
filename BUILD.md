@@ -8,6 +8,13 @@ Run:
 build_release.bat
 ```
 
+`build_release.bat` downloads required runtime components when they are missing:
+
+- `zapret` Windows bundle.
+- standalone `zapret2` overlay for blockcheck.
+- Flowseal strategy snapshot.
+- tg-ws-proxy snapshot.
+
 Output:
 
 ```text

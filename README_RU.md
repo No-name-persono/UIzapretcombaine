@@ -57,6 +57,7 @@ python -m py_compile main.py core.py ui.py upstreams.py tg_ws_proxy.py flowseal_
 Сборка portable-релиза:
 
 ```powershell
+python fetch_release_components.py
 python prepare_release_assets.py
 .\build_release.bat
 ```

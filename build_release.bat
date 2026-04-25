@@ -18,12 +18,6 @@ if not exist "%BUILD_PY%" (
     exit /b 1
 )
 
-tasklist /FI "IMAGENAME eq Zapret2Manager.exe" | find /I "Zapret2Manager.exe" >nul
-if %errorlevel% equ 0 (
-    echo [!] Close running Zapret2Manager.exe before rebuilding.
-    exit /b 1
-)
-
 "%BUILD_PY%" -c "import cryptography" >nul 2>&1
 if errorlevel 1 (
     echo [*] Installing build dependency: cryptography
@@ -32,6 +26,12 @@ if errorlevel 1 (
         echo [!] Failed to install cryptography into build environment.
         exit /b 1
     )
+)
+
+"%BUILD_PY%" fetch_release_components.py
+if errorlevel 1 (
+    echo [!] Failed to fetch release runtime components.
+    exit /b 1
 )
 
 "%BUILD_PY%" prepare_release_assets.py

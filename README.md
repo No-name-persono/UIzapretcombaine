@@ -90,6 +90,7 @@ tg_ws_proxy.py             Adapted embedded Telegram WS proxy
 flowseal_profiles.py       Flowseal strategy profile conversion
 generator.py               Strategy generation helpers
 prepare_release_assets.py  Release asset staging
+fetch_release_components.py Download runtime components for source builds
 Zapret2Manager.spec        PyInstaller configuration
 docs/                      Maintainer and user documentation
 ```

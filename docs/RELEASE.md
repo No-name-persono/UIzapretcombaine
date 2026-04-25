@@ -14,6 +14,7 @@ Use this checklist before publishing a GitHub Release.
 
 ```powershell
 python -m py_compile main.py core.py ui.py upstreams.py tg_ws_proxy.py flowseal_profiles.py generator.py prepare_release_assets.py
+python fetch_release_components.py
 python prepare_release_assets.py
 .\build_release.bat
 ```
